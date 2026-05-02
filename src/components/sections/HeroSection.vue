@@ -47,11 +47,22 @@
       <!-- Headline -->
       <h1
         :class="{ 'animate-rise': ready, 'opacity-0': !ready }"
-        class="text-center font-heading text-[clamp(3rem,9vw,6.5rem)] leading-[0.95] tracking-tighter text-slate-900"
+        class="text-center font-heading text-[clamp(2rem,5.2vw,4.2rem)] leading-[1.08] tracking-tighter text-slate-900 max-w-5xl mx-auto"
         style="animation-delay: 0.15s"
       >
-        <span class="block font-extrabold">Off</span>
-        <span class="block font-light italic text-primary">the record.</span>
+        <span class="block font-extrabold">
+          Cómo
+          <em class="font-light italic text-primary">vender</em>,
+          <em class="font-light italic text-primary">mover</em>
+        </span>
+        <span class="block font-extrabold">
+          y hacer <em class="font-light italic text-primary">crecer</em>.
+        </span>
+        <span
+          class="block mt-6 text-[clamp(1rem,1.6vw,1.5rem)] font-medium leading-snug text-slate-500 tracking-tight"
+        >
+          Tu cadena gastronómica en 2026.
+        </span>
       </h1>
 
       <!-- Sub -->
