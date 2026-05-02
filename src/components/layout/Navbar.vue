@@ -51,7 +51,7 @@
             ? 'bg-white text-primary hover:bg-slate-50'
             : 'bg-primary text-white hover:bg-[#5346c7] shadow-md shadow-primary/25'"
         >
-          Pedir mi lugar
+          Anotarme
           <svg width="10" height="10" viewBox="0 0 13 13" fill="none">
             <path
               d="M2 6.5h9M7.5 3l3.5 3.5L7.5 10"
@@ -116,11 +116,12 @@ onUnmounted(() => {
 
 <style scoped>
 .nav-top {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-radius: 1.25rem;
-  border: 1px solid rgba(15, 23, 42, 0.06);
+  border: 1.5px solid rgba(105, 94, 222, 0.35);
+  box-shadow: 0 4px 24px -8px rgba(105, 94, 222, 0.18);
 }
 .nav-scrolled {
   background: var(--primary);

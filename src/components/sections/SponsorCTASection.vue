@@ -1,5 +1,5 @@
 <template>
-  <section id="sponsor" class="py-24 px-6 sm:px-12 bg-white overflow-hidden">
+  <section id="sponsor" class="py-32 sm:py-40 px-6 sm:px-12 bg-white overflow-hidden">
     <div class="max-w-3xl mx-auto text-center">
       <div
         class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider mb-4"

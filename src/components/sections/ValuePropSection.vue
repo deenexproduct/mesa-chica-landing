@@ -1,5 +1,5 @@
 <template>
-  <section id="value" class="py-24 px-6 sm:px-12 bg-white overflow-hidden">
+  <section id="value" class="py-32 sm:py-40 px-6 sm:px-12 bg-white overflow-hidden">
     <div class="max-w-6xl mx-auto">
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14">
         <div>
@@ -51,7 +51,7 @@ const values = [
   },
   {
     num: "Valor · 02",
-    title: 'Una mesa <em class="text-primary not-italic font-light italic">curada</em> de 30.',
+    title: '30 marcas, <em class="text-primary not-italic font-light italic">curadas</em> a mano.',
     text: "Dueños de cadenas, gerentes comerciales, e-commerce managers, marketing y emprendedores del retail. Todos decisores. Cero proveedores.",
   },
   {

@@ -1,5 +1,5 @@
 <template>
-  <section id="manifesto" class="py-24 px-6 sm:px-12 bg-white border-y border-slate-100">
+  <section id="manifesto" class="py-32 sm:py-40 px-6 sm:px-12 bg-white border-y border-slate-100">
     <div class="max-w-6xl mx-auto">
       <div class="grid lg:grid-cols-[1fr_2fr] gap-10 lg:gap-20 items-start">
         <div>
@@ -33,7 +33,7 @@
           </p>
           <p class="text-slate-500 text-[clamp(1rem,1.4vw,1.2rem)] pt-2">
             Sin filtros. Sin escenarios corporativos. Sin pitch comercial. Una mesa de 30
-            personas. Eso es todo.
+            marcas. Eso es todo.
           </p>
         </div>
       </div>

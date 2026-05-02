@@ -1,5 +1,5 @@
 <template>
-  <section id="speakers" class="py-24 px-6 sm:px-12 bg-white overflow-hidden">
+  <section id="speakers" class="py-32 sm:py-40 px-6 sm:px-12 bg-white overflow-hidden">
     <div class="max-w-6xl mx-auto">
       <!-- Header -->
       <div

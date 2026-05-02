@@ -1,5 +1,5 @@
 <template>
-  <section id="location" class="py-24 px-6 sm:px-12 bg-white overflow-hidden">
+  <section id="location" class="py-32 sm:py-40 px-6 sm:px-12 bg-white overflow-hidden">
     <div class="max-w-6xl mx-auto">
       <div class="mb-14">
         <div
@@ -66,7 +66,7 @@
 const details = [
   { label: "Fecha", value: "Sábado 16 de mayo de 2026" },
   { label: "Hora", value: "17:00 hs" },
-  { label: "Capacidad", value: "30 personas" },
+  { label: "Capacidad", value: "30 marcas" },
   { label: "Acceso", value: "Solo por invitación" },
   { label: "Costo", value: "Gratis" },
 ];

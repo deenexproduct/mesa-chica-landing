@@ -34,7 +34,7 @@
         <span
           class="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3.5 py-1.5 text-[0.72rem] font-bold tracking-wide text-primary"
         >
-          Solo 30 lugares
+          Solo 30 marcas
         </span>
         <span
           class="inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-3.5 py-1.5 text-[0.72rem] font-bold tracking-wide text-rose-500"
@@ -50,8 +50,8 @@
         class="text-center font-heading text-[clamp(3rem,9vw,6.5rem)] leading-[0.95] tracking-tighter text-slate-900"
         style="animation-delay: 0.15s"
       >
-        <span class="block font-extrabold">Mesa</span>
-        <span class="block font-light italic text-primary">Chica.</span>
+        <span class="block font-extrabold">Off</span>
+        <span class="block font-light italic text-primary">the record.</span>
       </h1>
 
       <!-- Sub -->
@@ -75,7 +75,7 @@
           class="btn-primary group inline-flex items-center gap-2 bg-primary text-white font-semibold rounded-xl px-5 py-3 sm:px-6 sm:py-3.5 text-[0.9rem] sm:text-[0.95rem] transition-all hover:bg-[#5346c7] shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5 relative overflow-hidden"
         >
           <span class="btn-shimmer"></span>
-          Pedir mi lugar
+          Anotarme
           <span
             class="inline-flex items-center justify-center w-5 h-5 rounded-lg bg-white/15 transition-transform duration-300 group-hover:translate-x-0.5"
           >
@@ -123,7 +123,7 @@
         <div
           class="flex items-center justify-between mb-2.5 font-mono text-[0.68rem] uppercase tracking-[0.14em]"
         >
-          <span class="text-slate-400">Lugares ocupados</span>
+          <span class="text-slate-400">Marcas inscriptas</span>
           <span class="text-primary font-bold">{{ occupied }} / 30</span>
         </div>
         <div class="h-1 bg-slate-200 rounded-full overflow-hidden">
@@ -169,10 +169,10 @@ const hasAnimated = ref(false);
 const occupied = ref(18); // PLACEHOLDER: actualizar manualmente
 
 const stats = [
-  { prefix: "+", value: 1350, suffix: "", label: "Marcas combinadas" },
-  { prefix: "+", value: 50, suffix: "K", label: "Envíos / mes (Puni)" },
-  { prefix: "", value: 3, suffix: "", label: "Founders en mesa" },
-  { prefix: "", value: 30, suffix: "", label: "Lugares totales" },
+  { prefix: "+", value: 1500, suffix: "", label: "Marcas trabajadas" },
+  { prefix: "+", value: 1, suffix: "M", label: "Envíos / mes" },
+  { prefix: "", value: 3, suffix: "", label: "CEOs fundadores" },
+  { prefix: "", value: 100, suffix: "%", label: "Decisores en la mesa" },
 ];
 
 const displayValues = reactive(stats.map(() => 0));

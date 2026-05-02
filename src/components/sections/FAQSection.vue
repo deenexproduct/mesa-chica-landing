@@ -1,5 +1,5 @@
 <template>
-  <section id="faq" class="py-24 px-6 sm:px-12 overflow-hidden">
+  <section id="faq" class="py-32 sm:py-40 px-6 sm:px-12 overflow-hidden">
     <div class="max-w-6xl mx-auto">
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14">
         <div>
@@ -70,11 +70,11 @@ function toggle(i) {
 const faqs = [
   {
     q: "¿Cuánto cuesta la entrada?",
-    a: "Es gratis. Pero hay solo 30 lugares y son por invitación. Tu registro queda sujeto a aprobación de los organizadores.",
+    a: "Es gratis. Pero hay solo 30 marcas en la mesa y el acceso es por invitación. Tu registro queda sujeto a aprobación de los organizadores.",
   },
   {
     q: "¿Cómo me anoto?",
-    a: "Vía Luma. El link se publica acá y también va por mail a los contactos invitados. Apenas confirmes, vas a recibir un correo con el resultado de la aprobación.",
+    a: "Apretás el botón \"Anotarme\", completás el formulario con los datos de tu marca y te avisamos por mail si quedaste seleccionado. Tarda menos de un minuto.",
   },
   {
     q: "¿Quién puede asistir?",
@@ -82,15 +82,15 @@ const faqs = [
   },
   {
     q: "¿Puedo llevar a alguien de mi equipo?",
-    a: "Cada lugar es individual y tiene que pasar por el mismo proceso de aprobación. Si querés invitar a alguien, escribinos antes por WhatsApp y lo evaluamos.",
+    a: "Sí, podés venir con todo tu equipo sin problema. Contamos por marca, no por persona: cada marca aprobada puede traer a quien necesite (gerentes, marketing, operaciones). Solo pedimos que nos digas cuántos van a venir cuando confirmes, para preparar el espacio.",
   },
   {
     q: "¿Va a haber grabación?",
     a: "La idea es que sea una conversación off the record. Si grabamos algo, será solo material institucional acordado previamente con los founders, no la mesa completa.",
   },
   {
-    q: "¿Por qué solo 30 lugares?",
-    a: "Porque el formato no es charla, es mesa. A partir de 30 personas el debate y el networking se diluyen. Preferimos pocos y bien curados.",
+    q: "¿Por qué solo 30 marcas?",
+    a: "Porque el formato no es charla, es mesa. A partir de cierto número, el debate y el networking se diluyen. Preferimos pocas marcas y bien curadas.",
   },
   {
     q: "¿Hay estacionamiento?",
