@@ -9,6 +9,7 @@
       <AgendaSection class="v-reveal" />
       <BrandsSection class="v-reveal" />
       <LocationSection class="v-reveal" />
+      <QuieroIrBanner class="v-reveal" />
       <FAQSection class="v-reveal" />
       <SponsorCTASection class="v-reveal" />
       <FinalCTASection class="v-reveal" />
@@ -28,6 +29,7 @@ import AgendaSection from "@/components/sections/AgendaSection.vue";
 import ValuePropSection from "@/components/sections/ValuePropSection.vue";
 import BrandsSection from "@/components/sections/BrandsSection.vue";
 import LocationSection from "@/components/sections/LocationSection.vue";
+import QuieroIrBanner from "@/components/sections/QuieroIrBanner.vue";
 import FAQSection from "@/components/sections/FAQSection.vue";
 import SponsorCTASection from "@/components/sections/SponsorCTASection.vue";
 import FinalCTASection from "@/components/sections/FinalCTASection.vue";

@@ -72,8 +72,8 @@ const values = [
   },
   {
     num: "05 · Networking",
-    title: 'Networking con <em class="not-italic font-light italic text-primary">30 decisores</em>.',
-    text: "Dueños y gerentes del retail en una sala curada. Cero proveedores, cero pitch, cero curiosos.",
+    title: 'Networking de <em class="not-italic font-light italic text-primary">alta calidad</em>.',
+    text: "Dueños, gerentes y heads del retail en una sala curada. Cero proveedores, cero pitch, cero curiosos.",
   },
   {
     num: "06 · Casos reales",

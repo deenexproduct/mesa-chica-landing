@@ -1,32 +1,40 @@
 <template>
   <section id="location" class="py-32 sm:py-40 px-6 sm:px-12 bg-white overflow-hidden">
     <div class="max-w-6xl mx-auto">
-      <div class="mb-14">
-        <div
-          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider mb-4"
-        >
-          <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-          Dónde
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+        <div>
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider mb-4"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            Dónde
+          </div>
+          <h2
+            class="font-heading text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold tracking-tighter leading-[1.05] text-slate-900"
+          >
+            En el <span class="text-primary italic font-light">centro</span> de Córdoba.
+          </h2>
         </div>
-        <h2
-          class="font-heading text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold tracking-tighter leading-[1.05] text-slate-900"
+        <p
+          class="font-heading text-[clamp(1.05rem,1.6vw,1.35rem)] font-light leading-snug text-slate-600 lg:max-w-md lg:text-right"
         >
-          En el <span class="text-primary italic font-light">centro</span> de Córdoba.
-        </h2>
+          Una sede curada con escenario, sonido y producción.
+          <span class="text-primary italic font-medium">Dirección por mail</span>
+          al aprobar tu inscripción.
+        </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <div>
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div class="lg:pt-4">
           <p
-            class="font-heading text-[clamp(1.2rem,2vw,1.6rem)] font-light leading-snug text-slate-600 mb-6"
+            class="font-heading text-[clamp(1.15rem,1.8vw,1.5rem)] font-light leading-snug text-slate-700 mb-5"
           >
-            Una sede curada con escenario, sonido y producción. La dirección exacta se
-            confirma por mail una vez que tu inscripción queda
-            <span class="text-primary italic font-medium">aprobada</span>.
+            La sala está pensada para que el escenario funcione y el networking del
+            cierre sea <span class="text-primary italic font-medium">cara a cara</span>.
           </p>
           <p class="text-[0.95rem] text-slate-500 leading-relaxed">
-            La sala está pensada para que el escenario funcione y el networking del
-            cierre sea cara a cara. 30 marcas decisoras, los 3 founders y nada más.
+            30 marcas decisoras, los 3 founders y nada más. Sin salones gigantes
+            ni filas anónimas.
           </p>
         </div>
 
