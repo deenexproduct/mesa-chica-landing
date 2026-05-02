@@ -71,8 +71,9 @@
         class="mx-auto mt-7 max-w-[640px] text-center text-[1.05rem] sm:text-[1.15rem] font-medium leading-[1.6] text-slate-500"
         style="animation-delay: 0.28s"
       >
-        Tres founders argentinos. Tres canales que están redefiniendo el retail.
-        Una conversación <span class="font-semibold text-slate-900">off the record</span> en el centro de Córdoba.
+        Tres founders argentinos del nuevo retail
+        <span class="font-semibold text-slate-900">en un mismo escenario</span>.
+        Sábado 16 de mayo, centro de Córdoba.
       </p>
 
       <!-- CTAs -->

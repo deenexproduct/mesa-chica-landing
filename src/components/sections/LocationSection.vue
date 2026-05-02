@@ -20,13 +20,13 @@
           <p
             class="font-heading text-[clamp(1.2rem,2vw,1.6rem)] font-light leading-snug text-slate-600 mb-6"
           >
-            Un espacio íntimo, en el corazón de la ciudad. La dirección exacta se confirma
-            por mail una vez que tu registro queda
-            <span class="text-primary italic font-medium">aprobado</span>.
+            Una sede curada con escenario, sonido y producción. La dirección exacta se
+            confirma por mail una vez que tu inscripción queda
+            <span class="text-primary italic font-medium">aprobada</span>.
           </p>
           <p class="text-[0.95rem] text-slate-500 leading-relaxed">
-            La sede está pensada para una conversación de mesa, no de auditorio. Cabemos
-            30 personas exactas, cara a cara, sin tarima ni pantallas gigantes.
+            La sala está pensada para que el escenario funcione y el networking del
+            cierre sea cara a cara. 30 marcas decisoras, los 3 founders y nada más.
           </p>
         </div>
 

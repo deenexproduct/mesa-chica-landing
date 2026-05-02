@@ -86,11 +86,11 @@ const faqs = [
   },
   {
     q: "¿Va a haber grabación?",
-    a: "La idea es que sea una conversación off the record. Si grabamos algo, será solo material institucional acordado previamente con los founders, no la mesa completa.",
+    a: "Sí, es un evento producido y vamos a generar contenido del escenario y del networking. Si preferís no aparecer en cámara, avisanos al confirmar y lo coordinamos.",
   },
   {
     q: "¿Por qué solo 30 marcas?",
-    a: "Porque el formato no es charla, es mesa. A partir de cierto número, el debate y el networking se diluyen. Preferimos pocas marcas y bien curadas.",
+    a: "Porque queremos que el networking del cierre funcione de verdad. Más allá de 30 marcas, las conversaciones después del evento se diluyen y los contactos quedan superficiales.",
   },
   {
     q: "¿Hay estacionamiento?",

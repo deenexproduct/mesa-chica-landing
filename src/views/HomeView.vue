@@ -3,10 +3,10 @@
     <Navbar />
     <main>
       <HeroSection />
+      <ValuePropSection class="v-reveal" />
       <ManifestoSection class="v-reveal" />
       <SpeakersSection class="v-reveal" />
       <AgendaSection class="v-reveal" />
-      <ValuePropSection class="v-reveal" />
       <BrandsSection class="v-reveal" />
       <LocationSection class="v-reveal" />
       <FAQSection class="v-reveal" />

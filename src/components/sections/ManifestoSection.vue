@@ -12,7 +12,7 @@
           <h2
             class="font-heading text-[clamp(1.8rem,3.6vw,2.6rem)] font-extrabold tracking-tighter leading-[1.05] text-slate-900"
           >
-            Por qué <span class="text-primary italic font-light">esta mesa</span>.
+            Por qué <span class="text-primary italic font-light">este evento</span>.
           </h2>
         </div>
 
@@ -27,13 +27,13 @@
             <span class="text-primary italic font-medium">Ya no.</span>
           </p>
           <p>
-            Por primera vez, los founders detrás de Deenex, Puni y Pimentón se sientan
-            en la misma mesa, en el corazón de Córdoba, para contar qué está pasando — y
-            qué viene.
+            Por primera vez, los founders detrás de Deenex, Puni y Pimentón comparten
+            escenario en el corazón de Córdoba para contar qué está pasando — y qué
+            viene.
           </p>
           <p class="text-slate-500 text-[clamp(1rem,1.4vw,1.2rem)] pt-2">
-            Sin filtros. Sin escenarios corporativos. Sin pitch comercial. Una mesa de 30
-            marcas. Eso es todo.
+            Tres founders, tres charlas, un debate y networking de cierre. 30 marcas
+            curadas en la sala. Datos concretos, no humo.
           </p>
         </div>
       </div>

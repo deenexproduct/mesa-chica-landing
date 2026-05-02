@@ -12,7 +12,7 @@
       <h2
         class="font-heading text-[clamp(3rem,8vw,7rem)] font-light italic leading-[0.95] tracking-tighter text-slate-900 mb-7"
       >
-        Sumá tu <span class="text-primary">marca.</span>
+        Quiero <span class="text-primary">ir.</span>
       </h2>
 
       <div
