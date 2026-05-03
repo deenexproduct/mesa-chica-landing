@@ -32,8 +32,8 @@
       <div
         class="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-white/50 tracking-wider"
       >
-        <p>© {{ currentYear }} Mesa Chica · Córdoba, Argentina</p>
-        <p class="font-mono">#MesaChica</p>
+        <p>© {{ currentYear }} · Córdoba, Argentina</p>
+        <p class="font-mono">Sábado 16.05.2026 · 17 hs</p>
       </div>
     </div>
 

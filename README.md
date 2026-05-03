@@ -1,8 +1,8 @@
-# Mesa Chica · Landing oficial
+# Landing · Evento de retail Córdoba 16/05/2026
 
-Landing page del evento **Mesa Chica** — sábado 16 de mayo de 2026, centro de Córdoba.
-Tres founders argentinos del nuevo retail (Deenex, Puni y Pimentón) en una mesa de 30 decisores.
-Sin moderador, sin pitch, sin escenarios corporativos.
+Landing page del evento del **sábado 16 de mayo de 2026, centro de Córdoba**.
+Tres founders argentinos del nuevo retail (Deenex, Puni y Pimentón) en escenario:
+cómo vender, mover y hacer crecer una cadena gastronómica en 2026. Solo 30 marcas en la sala.
 
 ## Stack
 
@@ -41,7 +41,7 @@ Hay un workflow en `.github/workflows/deploy.yml` que buildea y publica automát
 2. Hacé push a `main`.
 3. La URL final va a ser `https://<usuario>.github.io/mesa-chica-landing/`.
 
-El `vite.config.js` setea `base: "/mesa-chica-landing/"` cuando `GITHUB_PAGES=true` (lo hace el workflow). Si vas a dominio raíz custom (ej `mesachica.com.ar`), cambiá esa línea a `base: "/"`.
+El `vite.config.js` setea `base: "/mesa-chica-landing/"` cuando `GITHUB_PAGES=true` (lo hace el workflow). Si vas a un dominio raíz custom, cambiá esa línea a `base: "/"`.
 
 ### Vercel
 
@@ -111,7 +111,7 @@ Antes de difundir, hay que reemplazar lo siguiente:
 | **Sede exacta** | `src/components/sections/LocationSection.vue` | Mantener oculta hasta el día (estrategia FOMO) o reemplazar `"Centro de Córdoba"` cuando se decida publicar. |
 | **Cupos ocupados** | `src/components/sections/HeroSection.vue` → `occupied = ref(18)` | Actualizar manualmente este número cuando llegue el momento. La barra animada está hardcoded a 60% (18/30) en el CSS — si querés que la barra refleje la cifra real automáticamente, ver sección "Cómo actualizar el contador de cupos" abajo. |
 | **OG image** | `public/og-image.svg` | Placeholder con texto. Si querés algo más cuidado, exportar a PNG con un editor de imágenes y reemplazar (mantener mismo path). |
-| **Dominio canonical** | `index.html` → `<link rel="canonical">` y meta `og:url` | Hoy apunta a `mesachica.com.ar`. Cambiar al dominio final. |
+| **Dominio canonical** | `index.html` → `<link rel="canonical">` y meta `og:url` | Hoy apunta a `tudominio.com.ar` (placeholder). Cambiar al dominio final. |
 | **Logos del footer** | `src/components/layout/Footer.vue` | Hoy son texto estilizado. Si tenés SVGs/PNGs, reemplazar el `<span>` del nombre por `<img>` con el logo. |
 
 Buscar `PLACEHOLDER` en el código para encontrarlos rápido.
@@ -140,7 +140,7 @@ Después hacer commit y push — el workflow se encarga del resto. (Si te animá
 
 ## Crédito
 
-Sistema de diseño base inspirado y reutilizado del sitio de [Deenex](https://github.com/deenexproduct/deenex-website-v2) (paleta, tipografías, patrones de sección, animaciones, noise texture, reveals). Mesa Chica es un evento co-organizado por Deenex, así que la reutilización está autorizada.
+Sistema de diseño base inspirado y reutilizado del sitio de [Deenex](https://github.com/deenexproduct/deenex-website-v2) (paleta, tipografías, patrones de sección, animaciones, noise texture, reveals). El evento es co-organizado por Deenex, así que la reutilización está autorizada.
 
 ---
 

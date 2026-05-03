@@ -12,10 +12,10 @@
             :class="scrolled ? 'bg-white animate-pulse' : 'bg-primary animate-pulse'"
           ></span>
           <span
-            class="font-heading font-extrabold text-[0.95rem] tracking-tight transition-colors"
+            class="font-heading font-extrabold text-[0.85rem] sm:text-[0.95rem] tracking-tight transition-colors"
             :class="scrolled ? 'text-white' : 'text-slate-900'"
           >
-            Mesa Chica
+            Vender · Mover · Crecer
           </span>
           <span
             class="hidden sm:inline text-[0.72rem] font-mono tracking-widest transition-colors"

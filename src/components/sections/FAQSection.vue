@@ -96,5 +96,9 @@ const faqs = [
     q: "¿Hay estacionamiento?",
     a: "La sede está en el centro de Córdoba, con varias opciones de cocheras a metros. Te enviamos la guía exacta junto con la confirmación.",
   },
+  {
+    q: "¿Voy a poder hacer preguntas y conocer a los founders?",
+    a: "Sí. Después de cada charla hay tiempo para preguntas del público y al cierre hay un debate abierto entre los tres. Y al final, networking con tragos en el que vas a poder hablar 1-a-1 con Alan, Matías y Gabriel sin filtros.",
+  },
 ];
 </script>

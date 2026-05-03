@@ -107,7 +107,7 @@
           href="#speakers"
           class="group inline-flex items-center gap-2 px-3 py-3 sm:px-4 sm:py-3.5 text-[0.9rem] sm:text-[0.95rem] font-semibold text-slate-600 hover:text-primary transition-colors"
         >
-          Ver el line-up
+          Conocer a los founders
           <svg
             width="12"
             height="12"

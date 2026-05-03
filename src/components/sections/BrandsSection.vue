@@ -98,19 +98,44 @@
 </template>
 
 <script setup>
-// Marquee logos (los disponibles del repo Deenex)
+// Marquee logos — combinados de Deenex, Puni y Pimentón
 const marqueeLogos = [
+  // Deenex
   { src: new URL("../../assets/images/brands/coquitos.webp", import.meta.url).href, alt: "Coquitos" },
   { src: new URL("../../assets/images/brands/la-fabrica.webp", import.meta.url).href, alt: "La Fábrica" },
   { src: new URL("../../assets/images/brands/palta.webp", import.meta.url).href, alt: "Somos Palta" },
   { src: new URL("../../assets/images/brands/hatsu.webp", import.meta.url).href, alt: "Hatsu" },
   { src: new URL("../../assets/images/brands/glorias.webp", import.meta.url).href, alt: "Glorias" },
   { src: new URL("../../assets/images/brands/monti.webp", import.meta.url).href, alt: "Monti" },
+  // Puni
+  { src: new URL("../../assets/images/brands/puni_jumbo.png", import.meta.url).href, alt: "Jumbo" },
+  { src: new URL("../../assets/images/brands/puni_disco.png", import.meta.url).href, alt: "Disco" },
+  { src: new URL("../../assets/images/brands/puni_vea.png", import.meta.url).href, alt: "Vea" },
+  { src: new URL("../../assets/images/brands/puni_ml.png", import.meta.url).href, alt: "Mercado Libre" },
+  { src: new URL("../../assets/images/brands/puni_tn.png", import.meta.url).href, alt: "Tienda Nube" },
+  // Pimentón
+  { src: new URL("../../assets/images/brands/pimenton_rappi.png", import.meta.url).href, alt: "Rappi" },
+  { src: new URL("../../assets/images/brands/pimenton_pedidosya.png", import.meta.url).href, alt: "PedidosYa" },
+  { src: new URL("../../assets/images/brands/pimenton_ubereats.png", import.meta.url).href, alt: "Uber Eats" },
+  { src: new URL("../../assets/images/brands/pimenton_glovo.png", import.meta.url).href, alt: "Glovo" },
+  { src: new URL("../../assets/images/brands/pimenton_ifood.png", import.meta.url).href, alt: "iFood" },
+  // Más Deenex
   { src: new URL("../../assets/images/brands/quem.webp", import.meta.url).href, alt: "Quem" },
   { src: new URL("../../assets/images/brands/emplatame.webp", import.meta.url).href, alt: "Emplátame" },
   { src: new URL("../../assets/images/brands/konex.webp", import.meta.url).href, alt: "Konex" },
   { src: new URL("../../assets/images/brands/sportclub.png", import.meta.url).href, alt: "SportClub" },
   { src: new URL("../../assets/images/brands/ayres.webp", import.meta.url).href, alt: "Ayres" },
+  // Más Puni
+  { src: new URL("../../assets/images/brands/puni_fgp.png", import.meta.url).href, alt: "FGP" },
+  { src: new URL("../../assets/images/brands/puni_pedir.png", import.meta.url).href, alt: "Pedir" },
+  // Más Pimentón
+  { src: new URL("../../assets/images/brands/pimenton_didi.png", import.meta.url).href, alt: "DiDi Food" },
+  { src: new URL("../../assets/images/brands/pimenton_justeat.png", import.meta.url).href, alt: "Just Eat" },
+  { src: new URL("../../assets/images/brands/pimenton_deliveroo.png", import.meta.url).href, alt: "Deliveroo" },
+  { src: new URL("../../assets/images/brands/pimenton_deliveryhero.png", import.meta.url).href, alt: "Delivery Hero" },
+  { src: new URL("../../assets/images/brands/pimenton_otter.png", import.meta.url).href, alt: "Otter" },
+  { src: new URL("../../assets/images/brands/pimenton_deliverect.png", import.meta.url).href, alt: "Deliverect" },
+  // Partners (POS, pagos)
   { src: new URL("../../assets/images/brands/Maxirest.webp", import.meta.url).href, alt: "Maxirest" },
   { src: new URL("../../assets/images/brands/Odoo.webp", import.meta.url).href, alt: "Odoo" },
   { src: new URL("../../assets/images/brands/mp.png", import.meta.url).href, alt: "Mercado Pago" },

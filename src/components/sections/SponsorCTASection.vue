@@ -46,6 +46,6 @@
 // PLACEHOLDER: validar dígitos del WhatsApp final
 const phoneNumber = "5491154592266";
 const message =
-  "Hola! Me interesa ser sponsor del evento Mesa Chica del 16 de mayo en Córdoba. Quería saber más.";
+  "Hola! Me interesa ser sponsor del evento del 16 de mayo en Córdoba (Deenex + Puni + Pimentón). Quería saber más.";
 const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 </script>
