@@ -37,6 +37,12 @@
           Solo 30 marcas
         </span>
         <span
+          class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-[0.72rem] font-bold tracking-wide text-emerald-700"
+        >
+          <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+          100% Gratis
+        </span>
+        <span
           class="inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-3.5 py-1.5 text-[0.72rem] font-bold tracking-wide text-rose-500"
         >
           <span class="h-1.5 w-1.5 rounded-full bg-rose-500 animate-pulse"></span>

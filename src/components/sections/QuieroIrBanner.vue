@@ -39,7 +39,9 @@
             ¿Te lo vas a perder, en serio?
           </h2>
           <p class="mt-2 text-white/80 text-[0.95rem] sm:text-[1rem] leading-snug">
-            Quedan {{ 30 - occupied }} lugares para marcas. Aprobación manual.
+            Quedan {{ 30 - occupied }} lugares.
+            <span class="font-bold text-white">Es gratis</span>, pero la
+            inscripción pasa por aprobación manual.
           </p>
         </div>
 

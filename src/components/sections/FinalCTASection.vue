@@ -20,6 +20,8 @@
       >
         <span>30 marcas</span>
         <span class="text-primary">·</span>
+        <span class="text-emerald-600 font-bold">Gratis</span>
+        <span class="text-primary">·</span>
         <span>Solo por invitación</span>
         <span class="text-primary">·</span>
         <span>Sujeto a aprobación</span>
