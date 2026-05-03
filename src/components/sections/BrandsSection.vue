@@ -132,30 +132,45 @@
             </div>
 
             <!-- Founder attribution -->
-            <a
-              :href="company.linkedin"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="founder-attr group/attr pt-5 border-t border-slate-100 flex items-center justify-between gap-3 -mx-1 px-1"
+            <button
+              type="button"
+              @click="openModal(company)"
+              class="founder-attr group/attr w-full pt-5 border-t border-slate-100 flex items-center justify-between gap-3 -mx-1 px-1 cursor-pointer text-left"
             >
-              <div>
+              <div class="flex items-center gap-3">
                 <div
-                  class="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-slate-400 font-bold mb-1"
+                  class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-gradient-to-br from-primary to-violet-500 shadow-sm shadow-primary/10 flex items-center justify-center shrink-0"
                 >
-                  En escenario
+                  <img
+                    v-if="company.photo"
+                    :src="company.photo"
+                    :alt="company.founder"
+                    class="w-full h-full object-cover"
+                  />
+                  <span
+                    v-else
+                    class="font-heading font-extrabold text-white text-sm"
+                  >{{ company.founder.charAt(0) }}</span>
                 </div>
-                <div
-                  class="font-heading font-extrabold text-slate-900 text-[1.05rem] tracking-tight group-hover/attr:text-primary transition-colors"
-                >
-                  {{ company.founder }}
+                <div>
+                  <div
+                    class="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-slate-400 font-bold mb-0.5"
+                  >
+                    En escenario
+                  </div>
+                  <div
+                    class="font-heading font-extrabold text-slate-900 text-[1rem] tracking-tight group-hover/attr:text-primary transition-colors leading-tight"
+                  >
+                    {{ company.founder }}
+                  </div>
                 </div>
               </div>
               <span
-                class="inline-flex items-center justify-center w-9 h-9 rounded-xl border border-slate-200 text-slate-400 group-hover/attr:bg-primary group-hover/attr:border-primary group-hover/attr:text-white transition-all"
+                class="inline-flex items-center justify-center w-9 h-9 rounded-xl border border-slate-200 text-slate-400 group-hover/attr:bg-primary group-hover/attr:border-primary group-hover/attr:text-white transition-all shrink-0"
               >
-                <svg width="14" height="14" viewBox="0 0 13 13" fill="none">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                   <path
-                    d="M2 6.5h9M7.5 3l3.5 3.5L7.5 10"
+                    d="M5 3l4 4-4 4"
                     stroke="currentColor"
                     stroke-width="1.8"
                     stroke-linecap="round"
@@ -163,15 +178,223 @@
                   />
                 </svg>
               </span>
-            </a>
+            </button>
           </div>
         </article>
       </div>
     </div>
+
+    <!-- Speaker Modal -->
+    <Teleport to="body">
+      <Transition name="modal">
+        <div
+          v-if="selectedCompany"
+          class="fixed inset-0 z-[1000] flex items-center justify-center p-4 sm:p-6"
+          @click.self="closeModal"
+        >
+          <!-- Backdrop -->
+          <div
+            class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
+            @click="closeModal"
+          ></div>
+
+          <!-- Dialog -->
+          <div
+            class="modal-card relative bg-white rounded-3xl shadow-2xl shadow-primary/20 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+            role="dialog"
+            aria-modal="true"
+          >
+            <!-- Close button -->
+            <button
+              type="button"
+              @click="closeModal"
+              class="absolute top-4 right-4 z-10 inline-flex items-center justify-center w-9 h-9 rounded-xl bg-white/95 border border-slate-200 text-slate-500 hover:text-slate-900 hover:border-slate-300 transition-all"
+              aria-label="Cerrar"
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path
+                  d="M3 3l8 8M11 3l-8 8"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+
+            <!-- Top: photo + name -->
+            <div
+              class="relative p-7 sm:p-9 pb-6 bg-gradient-to-br from-primary/[0.05] via-white to-violet-50/40 border-b border-slate-100"
+            >
+              <div class="flex flex-col sm:flex-row items-start gap-5">
+                <div
+                  class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border border-slate-100 bg-gradient-to-br from-primary to-violet-500 shadow-lg shadow-primary/20 shrink-0"
+                >
+                  <img
+                    v-if="selectedCompany.photo"
+                    :src="selectedCompany.photo"
+                    :alt="selectedCompany.founder"
+                    class="w-full h-full object-cover"
+                  />
+                  <div
+                    v-else
+                    class="w-full h-full flex items-center justify-center font-heading font-extrabold text-white text-4xl"
+                  >
+                    {{ selectedCompany.founder.charAt(0) }}
+                  </div>
+                </div>
+
+                <div class="flex-1 min-w-0">
+                  <div
+                    class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-[0.16em] mb-3"
+                  >
+                    {{ selectedCompany.canal }} · 0{{
+                      selectedCompany.idx + 1
+                    }} en escenario
+                  </div>
+                  <h3
+                    class="font-heading font-extrabold text-slate-900 text-[1.6rem] sm:text-[1.85rem] leading-tight tracking-tight mb-1"
+                  >
+                    {{ selectedCompany.founder }}
+                  </h3>
+                  <p class="text-[0.92rem] text-slate-500 font-medium mb-4">
+                    {{ selectedCompany.role }} ·
+                    <a
+                      :href="selectedCompany.website"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-primary hover:underline font-semibold"
+                    >{{ selectedCompany.name }}</a>
+                  </p>
+                  <a
+                    :href="selectedCompany.linkedin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 bg-[#0A66C2] hover:bg-[#0958a8] text-white text-[0.82rem] font-bold px-3.5 py-2 rounded-xl transition-all"
+                  >
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                      />
+                    </svg>
+                    Ver LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Body: startup info -->
+            <div class="p-7 sm:p-9 space-y-6">
+              <div>
+                <div
+                  class="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-slate-400 font-bold mb-2"
+                >
+                  Sobre {{ selectedCompany.name }}
+                </div>
+                <p class="text-slate-700 text-[0.95rem] leading-relaxed">
+                  {{ selectedCompany.startupBio }}
+                </p>
+              </div>
+
+              <!-- Stats grid -->
+              <div class="grid grid-cols-3 gap-3">
+                <div
+                  v-for="(s, i) in selectedCompany.miniStats"
+                  :key="i"
+                  class="text-center p-3 rounded-2xl bg-slate-50 border border-slate-100"
+                >
+                  <div
+                    class="font-heading font-extrabold text-primary text-[1.3rem] leading-none tracking-tight"
+                  >
+                    {{ s.value }}
+                  </div>
+                  <div
+                    class="text-[0.65rem] uppercase tracking-[0.12em] text-slate-500 font-bold mt-1.5 leading-tight"
+                  >
+                    {{ s.label }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Talk on stage -->
+              <div
+                class="rounded-2xl border border-primary/15 bg-gradient-to-br from-primary/[0.04] to-violet-100/30 p-5"
+              >
+                <div
+                  class="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-primary font-bold mb-2 flex items-center gap-2"
+                >
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                  Su charla en el evento · {{ selectedCompany.talkTime }}
+                </div>
+                <p
+                  class="font-heading italic text-[1.05rem] text-slate-800 leading-snug"
+                >
+                  "{{ selectedCompany.talkTitle }}"
+                </p>
+              </div>
+
+              <!-- Footer -->
+              <div class="pt-2 flex items-center justify-between">
+                <a
+                  :href="selectedCompany.website"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 text-[0.82rem] text-slate-500 hover:text-primary font-semibold transition-colors"
+                >
+                  {{ selectedCompany.websiteLabel }}
+                  <svg width="11" height="11" viewBox="0 0 13 13" fill="none">
+                    <path
+                      d="M3 10L10 3M10 3H4M10 3V9"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+                <button
+                  type="button"
+                  @click="closeModal"
+                  class="text-[0.82rem] text-slate-400 hover:text-slate-700 font-medium"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Transition>
+    </Teleport>
   </section>
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted, computed } from "vue";
+
+// Modal state
+const selectedIdx = ref(null);
+const selectedCompany = computed(() =>
+  selectedIdx.value !== null
+    ? { ...companies[selectedIdx.value], idx: selectedIdx.value }
+    : null
+);
+
+function openModal(company) {
+  selectedIdx.value = companies.findIndex((c) => c.name === company.name);
+  document.body.style.overflow = "hidden";
+}
+function closeModal() {
+  selectedIdx.value = null;
+  document.body.style.overflow = "";
+}
+function onEsc(e) {
+  if (e.key === "Escape") closeModal();
+}
+onMounted(() => window.addEventListener("keydown", onEsc));
+onUnmounted(() => {
+  window.removeEventListener("keydown", onEsc);
+  document.body.style.overflow = "";
+});
+
 // Marquee logos — combinados de Deenex, Puni y Pimentón
 const marqueeLogos = [
   // Deenex
@@ -232,7 +455,21 @@ const companies = [
     ],
     moreCount: 345,
     founder: "Alan Tapia",
+    role: "Founder & CEO",
+    photo: new URL("../../assets/images/speakers/alan-tapia.jpg", import.meta.url).href,
     linkedin: "https://www.linkedin.com/in/alantapia/",
+    website: "https://deenex.tech/",
+    websiteLabel: "deenex.tech",
+    startupBio:
+      "Plataforma omnicanal para cadenas de foodservice y gastronomía. Permite a marcas lanzar su canal propio de venta — PWA, pedidos por WhatsApp, fidelización con CRM y marketing con IA — sin pagar comisiones a marketplaces ni intermediarios.",
+    miniStats: [
+      { value: "+500", label: "Sucursales" },
+      { value: "0%", label: "Comisión" },
+      { value: "3 años", label: "En mercado" },
+    ],
+    talkTitle:
+      "Contexto, innovación y canal propio: por qué las cadenas tienen que dejar de pagar peaje.",
+    talkTime: "17:20 hs",
   },
   {
     name: "Puni",
@@ -250,7 +487,21 @@ const companies = [
     ],
     moreCount: 495,
     founder: "Matías Yoma",
+    role: "Founder & CEO",
+    photo: new URL("../../assets/images/speakers/matias-yoma.jpg", import.meta.url).href,
     linkedin: "https://www.linkedin.com/in/matias-millicay-yoma-245860b9/",
+    website: "https://www.puni.ar/",
+    websiteLabel: "puni.ar",
+    startupBio:
+      "Red de logística on-demand cordobesa. Conecta comercios con repartidores locales en cuatro provincias bajo un modelo de logística justa, sin las comisiones abusivas de las apps tradicionales. Trabajan con cadenas como Jumbo, Disco, Vea, Mercado Libre y Tienda Nube.",
+    miniStats: [
+      { value: "+50K", label: "Envíos / mes" },
+      { value: "+250", label: "Repartidores" },
+      { value: "4", label: "Provincias" },
+    ],
+    talkTitle:
+      "Última milla: cómo se mueve hoy el retail argentino — y por qué las cadenas están repensando todo.",
+    talkTime: "17:50 hs",
   },
   {
     name: "Pimentón",
@@ -268,7 +519,21 @@ const companies = [
     ],
     moreCount: 495,
     founder: "Gabriel Chayle",
+    role: "Country Manager AR",
+    photo: new URL("../../assets/images/speakers/gabriel-chayle.jpg", import.meta.url).href,
     linkedin: "https://www.linkedin.com/in/gabriel-francisco-chayle/",
+    website: "https://www.pimenton.io/",
+    websiteLabel: "pimenton.io",
+    startupBio:
+      "Growth partner especializado en apps de delivery. Optimiza visibilidad, ticket promedio, conversión y recompra para marcas que venden en plataformas como Rappi, PedidosYa, Uber Eats, Glovo, iFood y otras. Operación en LATAM y Europa.",
+    miniStats: [
+      { value: "+500", label: "Marcas" },
+      { value: "+10", label: "Plataformas" },
+      { value: "LATAM", label: "+ Europa" },
+    ],
+    talkTitle:
+      "Crecer adentro de las apps: el juego real dentro de Rappi, PedidosYa, Uber Eats y Glovo.",
+    talkTime: "18:20 hs",
   },
 ];
 </script>
@@ -324,5 +589,25 @@ const companies = [
 }
 .logo-chip {
   flex-shrink: 0;
+}
+
+/* Modal transition */
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.25s ease;
+}
+.modal-enter-active .modal-card,
+.modal-leave-active .modal-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.25s ease;
+}
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+.modal-enter-from .modal-card,
+.modal-leave-to .modal-card {
+  transform: translateY(20px) scale(0.97);
+  opacity: 0;
 }
 </style>
