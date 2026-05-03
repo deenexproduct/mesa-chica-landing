@@ -125,7 +125,7 @@ const speakers = [
     num: "02 / Mover",
     name: "Matías Yoma",
     initial: "M",
-    photo: new URL("@/assets/images/speakers/matias-yoma.png", import.meta.url).href,
+    photo: new URL("@/assets/images/speakers/matias-yoma.jpg", import.meta.url).href,
     linkedin: "https://www.linkedin.com/in/matias-millicay-yoma-245860b9/",
     role: "Founder & CEO · Puni",
     talk:
