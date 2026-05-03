@@ -108,7 +108,7 @@ const speakers = [
     num: "01 / Vender",
     name: "Alan Tapia",
     initial: "A",
-    photo: null,
+    photo: new URL("@/assets/images/speakers/alan-tapia.jpg", import.meta.url).href,
     linkedin: "https://www.linkedin.com/in/alantapia/",
     role: "Founder & CEO · Deenex",
     talk:
