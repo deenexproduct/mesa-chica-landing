@@ -35,14 +35,16 @@
       <div
         class="map-card relative rounded-3xl overflow-hidden border border-slate-200 shadow-2xl shadow-primary/10 bg-slate-100"
       >
-        <!-- Map iframe with violet tint -->
-        <div class="map-tint relative h-[480px] sm:h-[560px]">
+        <!-- Map iframe with violet tint (decorative, no scroll capture) -->
+        <div class="map-tint relative h-[480px] sm:h-[560px] pointer-events-none">
           <iframe
             class="map-iframe absolute inset-0 w-full h-full border-0"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-64.2050%2C-31.4350%2C-64.1750%2C-31.4050&amp;layer=mapnik"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-64.2700%2C-31.4750%2C-64.1100%2C-31.3650&amp;layer=mapnik"
             loading="lazy"
-            title="Mapa del centro de Córdoba Capital"
+            scrolling="no"
+            title="Mapa de Córdoba Capital"
             aria-hidden="true"
+            tabindex="-1"
           ></iframe>
         </div>
 
@@ -80,19 +82,19 @@
           </div>
         </div>
 
-        <!-- CENTER: pulsing pin -->
+        <!-- CENTER: pulsing pin (Nueva Córdoba area) -->
         <div
-          class="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-none"
+          class="absolute top-[58%] left-[52%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-none"
         >
-          <!-- Floating "Sede a confirmar" tag -->
+          <!-- Floating "Zona Nueva Córdoba" tag -->
           <div
             class="bg-white border border-primary/30 rounded-2xl px-3.5 py-2 shadow-xl shadow-primary/20 mb-3 whitespace-nowrap"
           >
             <div class="font-mono text-[9px] uppercase tracking-[0.18em] text-primary font-bold mb-0.5">
-              Sede
+              Zona Nueva Córdoba
             </div>
             <div class="font-heading font-extrabold text-slate-900 text-[0.92rem] tracking-tight">
-              Por confirmar
+              Sede por confirmar
             </div>
           </div>
 
