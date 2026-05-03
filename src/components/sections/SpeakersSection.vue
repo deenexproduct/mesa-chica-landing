@@ -142,7 +142,7 @@ const speakers = [
     num: "03 / Crecer",
     name: "Gabriel Chayle",
     initial: "G",
-    photo: null,
+    photo: new URL("@/assets/images/speakers/gabriel-chayle.jpg", import.meta.url).href,
     linkedin: "https://www.linkedin.com/in/gabriel-francisco-chayle/",
     role: "Country Manager AR · Pimentón",
     talk:
