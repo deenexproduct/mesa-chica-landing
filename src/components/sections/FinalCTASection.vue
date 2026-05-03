@@ -158,8 +158,12 @@
 </template>
 
 <script setup>
-// PLACEHOLDER: link real del formulario de inscripción cuando esté listo
-const signupLink = "#";
+// WhatsApp Alan Tapia (organizador) — single funnel for signups
+const signupLink =
+  "https://wa.me/5491154596266?text=" +
+  encodeURIComponent(
+    "Hola Alan! Quiero anotarme al evento del 16 de mayo en Córdoba. Mi nombre es ____ y mi marca es ____."
+  );
 // PLACEHOLDER: actualizar manualmente
 const occupied = 18;
 

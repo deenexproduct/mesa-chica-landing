@@ -43,9 +43,9 @@
 </template>
 
 <script setup>
-// PLACEHOLDER: validar dígitos del WhatsApp final
-const phoneNumber = "5491154592266";
+// WhatsApp Alan Tapia (organizador)
+const phoneNumber = "5491154596266";
 const message =
-  "Hola! Me interesa ser sponsor del evento del 16 de mayo en Córdoba (Deenex + Puni + Pimentón). Quería saber más.";
+  "Hola Alan! Me interesa ser sponsor del evento del 16 de mayo en Córdoba (Deenex + Puni + Pimentón). Quería saber más.";
 const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 </script>

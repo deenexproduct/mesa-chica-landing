@@ -89,7 +89,9 @@
         style="animation-delay: 0.4s"
       >
         <a
-          href="#luma"
+          :href="signupWhatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
           class="btn-primary group inline-flex items-center gap-2 bg-primary text-white font-semibold rounded-xl px-5 py-3 sm:px-6 sm:py-3.5 text-[0.9rem] sm:text-[0.95rem] transition-all hover:bg-[#5346c7] shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5 relative overflow-hidden"
         >
           <span class="btn-shimmer"></span>
@@ -185,6 +187,13 @@ const ready = ref(false);
 const statsRef = ref(null);
 const hasAnimated = ref(false);
 const occupied = ref(18); // PLACEHOLDER: actualizar manualmente
+
+// WhatsApp Alan Tapia (organizador) — single funnel for signups
+const signupWhatsapp =
+  "https://wa.me/5491154596266?text=" +
+  encodeURIComponent(
+    "Hola Alan! Quiero anotarme al evento del 16 de mayo en Córdoba. Mi nombre es ____ y mi marca es ____."
+  );
 
 const stats = [
   { prefix: "+", value: 1500, suffix: "", label: "Marcas trabajadas" },

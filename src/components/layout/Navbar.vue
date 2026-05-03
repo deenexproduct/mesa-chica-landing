@@ -49,7 +49,9 @@
 
         <!-- CTA -->
         <a
-          href="#luma"
+          :href="signupWhatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex items-center gap-1.5 sm:gap-2 text-[0.78rem] sm:text-[0.82rem] font-bold px-3.5 sm:px-4 py-2.5 sm:py-2.5 rounded-xl transition-all duration-300 shrink-0 min-h-[40px]"
           :class="scrolled
             ? 'bg-white text-primary hover:bg-slate-50'
@@ -76,6 +78,13 @@ import { ref, onMounted, onUnmounted, reactive } from "vue";
 
 const scrolled = ref(false);
 const target = new Date("2026-05-16T17:00:00-03:00").getTime();
+
+// WhatsApp Alan Tapia (organizador) — single funnel for signups
+const signupWhatsapp =
+  "https://wa.me/5491154596266?text=" +
+  encodeURIComponent(
+    "Hola Alan! Quiero anotarme al evento del 16 de mayo en Córdoba. Mi nombre es ____ y mi marca es ____."
+  );
 
 const units = reactive([
   { label: "días", value: "--" },
