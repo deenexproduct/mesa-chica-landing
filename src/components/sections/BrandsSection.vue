@@ -42,56 +42,136 @@
         </div>
       </div>
 
-      <!-- 3 columnas con detalle -->
+      <!-- 3 founder stories -->
       <div class="grid lg:grid-cols-3 gap-5">
-        <div
-          v-for="company in companies"
+        <article
+          v-for="(company, idx) in companies"
           :key="company.name"
-          class="group relative bg-white border border-slate-200 rounded-3xl p-7 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1 flex flex-col"
+          class="founder-card group relative bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2"
         >
-          <!-- Logo grande de la empresa -->
+          <!-- Subtle gradient bg -->
           <div
-            class="h-14 mb-5 flex items-center justify-start"
+            class="absolute inset-0 bg-gradient-to-br from-white via-white to-primary/[0.04] pointer-events-none"
+          ></div>
+
+          <!-- Decorative number watermark -->
+          <div
+            class="absolute -top-4 -right-3 font-heading font-black text-[10rem] leading-[0.85] text-primary/[0.06] tracking-tighter pointer-events-none select-none transition-transform duration-700 group-hover:-translate-y-1 group-hover:text-primary/10"
           >
-            <span
-              class="font-heading font-extrabold text-slate-900 text-[1.6rem] tracking-tight"
+            0{{ idx + 1 }}
+          </div>
+
+          <!-- Top accent line on hover -->
+          <div class="founder-accent"></div>
+
+          <div class="relative p-7 sm:p-8 flex flex-col h-full">
+            <!-- Canal tag -->
+            <div
+              class="inline-flex w-fit items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-[0.16em] mb-5"
+            >
+              <span>0{{ idx + 1 }}</span>
+              <span class="text-primary/40">·</span>
+              <span>{{ company.canal }}</span>
+            </div>
+
+            <!-- Brand name + tagline -->
+            <h3
+              class="font-heading text-[2.4rem] sm:text-[2.6rem] font-extrabold tracking-tighter text-slate-900 leading-[0.95] mb-1.5"
             >
               {{ company.name }}
-            </span>
-          </div>
+            </h3>
+            <p class="text-[0.92rem] text-slate-500 mb-6 leading-snug">
+              {{ company.tagline }}
+            </p>
 
-          <!-- Tag categoría -->
-          <div
-            class="inline-flex w-fit items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider mb-5"
-          >
-            {{ company.role }}
-          </div>
-
-          <!-- Stat principal -->
-          <div class="mb-5 pb-5 border-b border-slate-100">
+            <!-- Big stat block -->
             <div
-              class="font-heading font-extrabold text-primary text-[2.4rem] leading-none tracking-tighter"
+              class="mb-6 px-5 py-4 rounded-2xl bg-gradient-to-br from-primary/[0.07] to-primary/[0.02] border border-primary/10"
             >
-              {{ company.count }}
+              <div class="flex items-baseline gap-1.5">
+                <span
+                  class="font-heading font-extrabold text-primary text-[2.6rem] sm:text-[2.8rem] leading-none tracking-tighter"
+                >
+                  {{ company.stat }}
+                </span>
+                <span
+                  v-if="company.statSuffix"
+                  class="font-heading font-bold text-primary/70 text-[1rem]"
+                >
+                  {{ company.statSuffix }}
+                </span>
+              </div>
+              <div
+                class="text-[0.72rem] uppercase tracking-[0.14em] text-slate-500 font-bold mt-2"
+              >
+                {{ company.statLabel }}
+              </div>
             </div>
-            <div
-              class="text-[0.7rem] uppercase tracking-[0.14em] text-slate-400 font-bold mt-1.5"
-            >
-              {{ company.countLabel }}
-            </div>
-          </div>
 
-          <!-- Marcas destacadas -->
-          <div class="flex flex-wrap gap-2">
-            <span
-              v-for="brand in company.brands"
-              :key="brand"
-              class="font-heading text-[0.85rem] text-slate-600 px-3 py-1 bg-slate-50 border border-slate-100 rounded-full hover:bg-primary/5 hover:border-primary/30 hover:text-primary transition-colors cursor-default"
+            <!-- Real logos -->
+            <div class="flex-1 mb-6">
+              <div
+                class="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-slate-400 font-bold mb-3"
+              >
+                Marcas que confían
+              </div>
+              <div class="flex flex-wrap gap-2 items-center">
+                <div
+                  v-for="logo in company.logos"
+                  :key="logo.alt"
+                  class="logo-chip h-10 px-2.5 bg-white border border-slate-200 rounded-xl flex items-center justify-center hover:border-primary/40 hover:-translate-y-0.5 transition-all"
+                >
+                  <img
+                    :src="logo.src"
+                    :alt="logo.alt"
+                    class="max-h-[24px] w-auto object-contain max-w-[80px] grayscale hover:grayscale-0 transition-all"
+                    loading="lazy"
+                  />
+                </div>
+                <span
+                  v-if="company.moreCount"
+                  class="font-heading italic text-[0.85rem] text-slate-400 px-1"
+                >
+                  + {{ company.moreCount }} más
+                </span>
+              </div>
+            </div>
+
+            <!-- Founder attribution -->
+            <a
+              :href="company.linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="founder-attr group/attr pt-5 border-t border-slate-100 flex items-center justify-between gap-3 -mx-1 px-1"
             >
-              {{ brand }}
-            </span>
+              <div>
+                <div
+                  class="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-slate-400 font-bold mb-1"
+                >
+                  En escenario
+                </div>
+                <div
+                  class="font-heading font-extrabold text-slate-900 text-[1.05rem] tracking-tight group-hover/attr:text-primary transition-colors"
+                >
+                  {{ company.founder }}
+                </div>
+              </div>
+              <span
+                class="inline-flex items-center justify-center w-9 h-9 rounded-xl border border-slate-200 text-slate-400 group-hover/attr:bg-primary group-hover/attr:border-primary group-hover/attr:text-white transition-all"
+              >
+                <svg width="14" height="14" viewBox="0 0 13 13" fill="none">
+                  <path
+                    d="M2 6.5h9M7.5 3l3.5 3.5L7.5 10"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </a>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -144,24 +224,57 @@ const marqueeLogos = [
 const companies = [
   {
     name: "Deenex",
-    role: "Vender · Canal propio",
-    count: "+500",
-    countLabel: "Sucursales activas",
-    brands: ["Coquitos", "La Fábrica", "Somos Palta", "Hatsu", "Konex"],
+    canal: "Vender",
+    tagline: "Canal propio sin comisiones de marketplaces.",
+    stat: "+500",
+    statSuffix: "",
+    statLabel: "Sucursales activas",
+    logos: [
+      { src: new URL("../../assets/images/brands/coquitos.webp", import.meta.url).href, alt: "Coquitos" },
+      { src: new URL("../../assets/images/brands/la-fabrica.webp", import.meta.url).href, alt: "La Fábrica" },
+      { src: new URL("../../assets/images/brands/palta.webp", import.meta.url).href, alt: "Somos Palta" },
+      { src: new URL("../../assets/images/brands/hatsu.webp", import.meta.url).href, alt: "Hatsu" },
+      { src: new URL("../../assets/images/brands/konex.webp", import.meta.url).href, alt: "Konex" },
+    ],
+    moreCount: 345,
+    founder: "Alan Tapia",
+    linkedin: "https://www.linkedin.com/in/alantapia/",
   },
   {
     name: "Puni",
-    role: "Mover · Logística",
-    count: "+500",
-    countLabel: "Clientes / +50K envíos mes",
-    brands: ["Jumbo", "Disco", "Vea", "Mercado Libre", "Tienda Nube"],
+    canal: "Mover",
+    tagline: "Última milla justa, sin abusos de las apps.",
+    stat: "+50K",
+    statSuffix: "/ mes",
+    statLabel: "Envíos en 4 provincias",
+    logos: [
+      { src: new URL("../../assets/images/brands/puni_jumbo.png", import.meta.url).href, alt: "Jumbo" },
+      { src: new URL("../../assets/images/brands/puni_disco.png", import.meta.url).href, alt: "Disco" },
+      { src: new URL("../../assets/images/brands/puni_vea.png", import.meta.url).href, alt: "Vea" },
+      { src: new URL("../../assets/images/brands/puni_ml.png", import.meta.url).href, alt: "Mercado Libre" },
+      { src: new URL("../../assets/images/brands/puni_tn.png", import.meta.url).href, alt: "Tienda Nube" },
+    ],
+    moreCount: 495,
+    founder: "Matías Yoma",
+    linkedin: "https://www.linkedin.com/in/matias-millicay-yoma-245860b9/",
   },
   {
     name: "Pimentón",
-    role: "Crecer · Apps delivery",
-    count: "+500",
-    countLabel: "Marcas en LATAM + Europa",
-    brands: ["Lo de Jesús", "Rappi", "PedidosYa", "Uber Eats", "Glovo"],
+    canal: "Crecer",
+    tagline: "Performance dentro de Rappi, PedidosYa, Uber Eats y Glovo.",
+    stat: "+500",
+    statSuffix: "marcas",
+    statLabel: "Operación en LATAM + Europa",
+    logos: [
+      { src: new URL("../../assets/images/brands/pimenton_rappi.png", import.meta.url).href, alt: "Rappi" },
+      { src: new URL("../../assets/images/brands/pimenton_pedidosya.png", import.meta.url).href, alt: "PedidosYa" },
+      { src: new URL("../../assets/images/brands/pimenton_ubereats.png", import.meta.url).href, alt: "Uber Eats" },
+      { src: new URL("../../assets/images/brands/pimenton_glovo.png", import.meta.url).href, alt: "Glovo" },
+      { src: new URL("../../assets/images/brands/pimenton_ifood.png", import.meta.url).href, alt: "iFood" },
+    ],
+    moreCount: 495,
+    founder: "Gabriel Chayle",
+    linkedin: "https://www.linkedin.com/in/gabriel-francisco-chayle/",
   },
 ];
 </script>
@@ -194,5 +307,28 @@ const companies = [
 }
 .marquee-mask:hover .marquee-track {
   animation-play-state: paused;
+}
+
+.founder-card {
+  position: relative;
+}
+.founder-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), #a78bfa);
+  border-radius: 3px 3px 0 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
+}
+.founder-card:hover .founder-accent {
+  transform: scaleX(1);
+}
+.logo-chip {
+  flex-shrink: 0;
 }
 </style>
