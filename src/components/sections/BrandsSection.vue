@@ -128,12 +128,6 @@
                     loading="lazy"
                   />
                 </div>
-                <span
-                  v-if="company.moreCount"
-                  class="font-heading italic text-[0.85rem] text-slate-400 px-1"
-                >
-                  + {{ company.moreCount }} más
-                </span>
               </div>
             </div>
 
