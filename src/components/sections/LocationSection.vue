@@ -56,9 +56,9 @@
           class="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/85 to-transparent"
         ></div>
 
-        <!-- Top-left: city tag -->
+        <!-- Top-left: city tag (hidden on small phones to avoid date badge overlap) -->
         <div
-          class="absolute top-5 left-5 sm:top-6 sm:left-6 inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-3.5 py-1.5 shadow-lg shadow-black/5"
+          class="hidden sm:inline-flex absolute top-5 left-5 sm:top-6 sm:left-6 items-center gap-2 bg-white border border-slate-200 rounded-full px-3.5 py-1.5 shadow-lg shadow-black/5"
         >
           <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-400 font-bold">
             Córdoba Capital · Argentina
@@ -67,12 +67,12 @@
 
         <!-- Top-right: date badge -->
         <div
-          class="absolute top-5 right-5 sm:top-6 sm:right-6 bg-primary text-white rounded-2xl p-3 sm:p-4 shadow-xl shadow-primary/30"
+          class="absolute top-4 right-4 sm:top-6 sm:right-6 bg-primary text-white rounded-2xl p-2.5 sm:p-4 shadow-xl shadow-primary/30"
         >
           <div class="font-mono text-[9px] uppercase tracking-[0.18em] text-white/70 font-bold mb-0.5">
             Sábado
           </div>
-          <div class="font-heading font-extrabold text-[1.6rem] sm:text-[1.9rem] leading-none tracking-tighter">
+          <div class="font-heading font-extrabold text-[1.4rem] sm:text-[1.9rem] leading-none tracking-tighter">
             16.05
           </div>
           <div class="font-mono text-[9px] uppercase tracking-[0.18em] text-white/70 font-bold mt-1.5">

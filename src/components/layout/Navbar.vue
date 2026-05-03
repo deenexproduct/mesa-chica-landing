@@ -1,24 +1,28 @@
 <template>
-  <div class="fixed top-4 left-0 right-0 z-[100] flex flex-col items-center px-4">
+  <div class="fixed top-3 sm:top-4 left-0 right-0 z-[100] flex flex-col items-center px-3 sm:px-4">
     <nav
-      class="w-full max-w-6xl transition-all duration-500 px-4 py-2.5"
+      class="w-full max-w-6xl transition-all duration-500 px-3 sm:px-4 py-2 sm:py-2.5"
       :class="scrolled ? 'nav-scrolled' : 'nav-top'"
     >
-      <div class="flex items-center justify-between gap-4 h-13">
+      <div class="flex items-center justify-between gap-2 sm:gap-4 min-h-[44px]">
         <!-- Brand -->
-        <a href="#hero" @click.prevent="scrollToTop" class="flex items-center gap-2.5 shrink-0">
+        <a
+          href="#hero"
+          @click.prevent="scrollToTop"
+          class="flex items-center gap-2 sm:gap-2.5 shrink-0 min-w-0 py-2 -my-2"
+        >
           <span
-            class="w-2 h-2 rounded-full transition-colors"
+            class="w-2 h-2 rounded-full transition-colors shrink-0"
             :class="scrolled ? 'bg-white animate-pulse' : 'bg-primary animate-pulse'"
           ></span>
           <span
-            class="font-heading font-extrabold text-[0.85rem] sm:text-[0.95rem] tracking-tight transition-colors"
+            class="font-heading font-extrabold text-[0.78rem] sm:text-[0.95rem] tracking-tight transition-colors truncate"
             :class="scrolled ? 'text-white' : 'text-slate-900'"
           >
             Vender · Mover · Crecer
           </span>
           <span
-            class="hidden sm:inline text-[0.72rem] font-mono tracking-widest transition-colors"
+            class="hidden lg:inline text-[0.72rem] font-mono tracking-widest transition-colors shrink-0"
             :class="scrolled ? 'text-white/60' : 'text-slate-400'"
           >
             CBA · 16.05.26
@@ -46,7 +50,7 @@
         <!-- CTA -->
         <a
           href="#luma"
-          class="inline-flex items-center gap-2 text-[0.78rem] sm:text-[0.82rem] font-bold px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl transition-all duration-300 shrink-0"
+          class="inline-flex items-center gap-1.5 sm:gap-2 text-[0.78rem] sm:text-[0.82rem] font-bold px-3.5 sm:px-4 py-2.5 sm:py-2.5 rounded-xl transition-all duration-300 shrink-0 min-h-[40px]"
           :class="scrolled
             ? 'bg-white text-primary hover:bg-slate-50'
             : 'bg-primary text-white hover:bg-[#5346c7] shadow-md shadow-primary/25'"

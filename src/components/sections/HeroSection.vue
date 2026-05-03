@@ -22,28 +22,28 @@
         style="animation-delay: 0.05s"
       >
         <span
-          class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 backdrop-blur-sm px-3.5 py-1.5 text-[0.72rem] font-semibold tracking-wide text-slate-600"
+          class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 backdrop-blur-sm px-3 sm:px-3.5 py-1 sm:py-1.5 text-[0.65rem] sm:text-[0.72rem] font-semibold tracking-wide text-slate-600"
         >
           Córdoba · Argentina
         </span>
         <span
-          class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 backdrop-blur-sm px-3.5 py-1.5 text-[0.72rem] font-semibold tracking-wide text-slate-600"
+          class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 backdrop-blur-sm px-3 sm:px-3.5 py-1 sm:py-1.5 text-[0.65rem] sm:text-[0.72rem] font-semibold tracking-wide text-slate-600"
         >
           Sábado 16.05.2026 · 17 hs
         </span>
         <span
-          class="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3.5 py-1.5 text-[0.72rem] font-bold tracking-wide text-primary"
+          class="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 sm:px-3.5 py-1 sm:py-1.5 text-[0.65rem] sm:text-[0.72rem] font-bold tracking-wide text-primary"
         >
           Solo 30 marcas
         </span>
         <span
-          class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-[0.72rem] font-bold tracking-wide text-emerald-700"
+          class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 sm:px-3.5 py-1 sm:py-1.5 text-[0.65rem] sm:text-[0.72rem] font-bold tracking-wide text-emerald-700"
         >
           <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
           100% Gratis
         </span>
         <span
-          class="inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-3.5 py-1.5 text-[0.72rem] font-bold tracking-wide text-rose-500"
+          class="inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-3 sm:px-3.5 py-1 sm:py-1.5 text-[0.65rem] sm:text-[0.72rem] font-bold tracking-wide text-rose-500"
         >
           <span class="h-1.5 w-1.5 rounded-full bg-rose-500 animate-pulse"></span>
           Cupos disponibles

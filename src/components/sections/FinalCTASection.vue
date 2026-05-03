@@ -29,18 +29,18 @@
             class="flex flex-wrap items-center justify-center gap-3 mb-8"
           >
             <span
-              class="inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-3.5 py-1.5 text-[0.72rem] font-bold tracking-wide text-rose-600"
+              class="inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-3 sm:px-3.5 py-1 sm:py-1.5 text-[0.65rem] sm:text-[0.72rem] font-bold tracking-wide text-rose-600"
             >
               <span class="h-1.5 w-1.5 rounded-full bg-rose-500 animate-pulse"></span>
               Última llamada
             </span>
             <span
-              class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-[0.72rem] font-bold tracking-wide text-slate-600"
+              class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 sm:px-3.5 py-1 sm:py-1.5 text-[0.65rem] sm:text-[0.72rem] font-bold tracking-wide text-slate-600"
             >
               Quedan {{ 30 - occupied }} lugares
             </span>
             <span
-              class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-[0.72rem] font-bold tracking-wide text-emerald-700"
+              class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 sm:px-3.5 py-1 sm:py-1.5 text-[0.65rem] sm:text-[0.72rem] font-bold tracking-wide text-emerald-700"
             >
               <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
               100% Gratis

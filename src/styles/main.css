@@ -12,10 +12,20 @@
   --title-color: #1B1B1B;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Inter', sans-serif !important;
   background: #f8f9fb;
   color: var(--title-color);
+}
+
+/* Mobile-first safety net: prevent any inline content from breaking layout */
+img, video {
+  max-width: 100%;
+  height: auto;
 }
 
 h1, h2, h3, h4, h5, h6, .font-heading {
